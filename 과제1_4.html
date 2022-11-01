@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 여러 요소들을 하나의 인스턴스 안에서 입력하려면 dv 태그 사용 -->
+  <div id="app">
+    <h1>첫번째 입력: {{ word1 }}</h1>
+    <!-- 인스턴스에서 DOM으로 줄때 v-bind (단방향) -->
+    <!-- input 입력해서 인스턴스로 갔다가 다시 DOM으로 (양방향): v-model 사용-->
+    <input type="text" v-model="word1">
+
+    <h1>두번째 입력: {{ word2 }}</h1>
+    <input type="text" v-model="word2">
+
+    <h1>합산 입력: {{ combineWord }}</h1> 
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        word1: '',
+        word2: '',
+      },
+      computed: {
+        combineWord() {
+          return this.word1+ this.word2
+        }
+      }
+    })
+  </script>
+</body>
+</html>
