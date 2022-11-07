@@ -8,7 +8,7 @@ export default new Vuex.Store({
     message: 'message in store',
   },
   getters: {
-    messageLength(state) {
+    messageLeng th(state) {
       console.log('**************************')
       return state.message.length
       
