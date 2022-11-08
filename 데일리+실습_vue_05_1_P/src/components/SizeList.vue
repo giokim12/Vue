@@ -2,8 +2,8 @@
   <div class="size-list">
     <h1>2. 사이즈를 고르세요.</h1>
     <SizeListItem   
-      v-for="size in sizeList"
-      :key='size'
+      v-for="(size, idx) in sizeList"
+      :key='idx'
       :size='size'
     />
   </div>

@@ -2,8 +2,8 @@
   <div class="menu-list">
     <h1>1. 음료를 고르세요.</h1>
     <MenuListItem 
-      v-for="menu in menuList"
-      :key='menu'
+      v-for="(menu,idx) in menuList"
+      :key='idx'
       :menu='menu'
     />
   </div>
