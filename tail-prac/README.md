@@ -1,4 +1,4 @@
-# house-selling-app
+# tail-prac
 
 ## Project setup
 ```
